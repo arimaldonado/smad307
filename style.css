@@ -1,17 +1,15 @@
+/* ADD YOUR CUSTOM CSS TO THIS FILE BELOW */
 h1 {font-family:"Londrina Shadow",sans-serif;
 	font-size: 55px;}
-
-h2 {font-family:"Londrina Shadow",sans-serif;
-	font-size: 30px;}
 
 p, h3, ul {font-family:"Fira Sans", sans-serif;
   			font-weight: 100;
 			font-style: normal;}
 
 
-h1 {text-align: center}
+h1, h2, h3 {text-align: center}
 
-h1, h2, h3 {color: darkcyan;}
+h1, h2, h3, h4 {color: darkcyan;}
 
 #intro {text-align: center}
 
@@ -20,3 +18,7 @@ body {background-color: lightcyan;
 	  margin-left: 150px;
 	  margin-right: 150px}
 
+.btn-danger {
+    background-color: darkcyan;
+    border-color: darkcyan;
+}

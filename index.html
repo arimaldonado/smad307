@@ -1,116 +1,382 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<title>Workout Routine Builder</title>
-		<style>
-      ol, ul { 
-     list-style-type: none;
-      }
-   </style>
+  <head>
 
-   <!-- START GOOGLE FONT -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Notable&display=swap" rel="stylesheet">
-	<!-- END GOOGLE FONT -->
+    <!--
+AI Use Disclosure:
+Tool(s): ChatGPT (free version)
+Purpose: Helped align my Bootstrap nav, logo, and header. Gave me the CSS to change certain colors of boostrap code.
+Human Role: I selected which suggestions to use, and verified responsiveness manually.
+--> 
 
-   <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website to help plan and organize weekly workout routines.">
+    <meta name="author" content="Arianna Maldonado">
+    <!-- <title>Workout Routine Planner</title> -->
 
-	</head>
+   <!-- Bootstrap v5.3.8 -->
+   <!-- LOAD BOOTSTRAP CSS - DO NOT DELETE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!-- END LOADING BOOTSTRAP CSS -->
+    
+   <!-- Custom styles - add your own CSS to this stylesheet -->
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
 
-	<body>
+  </head>
+  <body>
+    
 
+<div class="container">
+  <header class="row align-items-center">
 
-<h1>Workout Routine Builder</h1>
-<div id=intro>
-<p>Make your week of exercise seamless and easy! Plan each week of workouts ahead of time to save the stress of planning your workout when you get to the gym. <br> Below you will be able to select your workout splits for the week and rest days. For each day you will also be able to select and add workouts to plan your routine ahead of time!</br></p>
+    <!-- Logo -->
+    <div class="col-md-3">
+      <img src="images/wrplogo.png"
+           alt="Workout Planner Logo"
+           class="img-fluid">
+    </div>
+
+    <!-- Title -->
+    <div class="col-md-6">
+      <h1>Workout Routine Planner</h1>
+    </div>
+
+    <!-- Navigation -->
+    <div class="col-md-3">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Connect</a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
 </div>
 
-<h2>Weekly Workout Plan</h2>
-<div id= week>
-<p>Type in what workout split you plan to complete for each day of the week. Here are some examples: leg day, push day, pull day, cardio & abs, glute day and rest day! </p>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+      <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/darkgym.jpg" class="d-block w-100" alt="Black and White Gym">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>About</h5>
+        <p>Make your week of exercise seamless and easy! Plan each week of workouts ahead of time to save the stress of planning your workout when you get to the gym.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/gymslide2.jpg" class="d-block w-100" alt="Woman Working Out">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Weekly Workout Plan</h5>
+        <p>Select what workout split you plan to complete for each day of the week. Here are some examples: leg day, push day, pull day, cardio & abs, glute day and rest day!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/slide3.jpg" class="d-block w-100" alt="Gym Equipment">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Select Exercises For Each Day</h5>
+        <p>Select 4-5 exercises for each day you plan on exercising. Feel free to add different exercises for each day, or skip a muscle group if that is not in your fitness goals!</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-<ul>
-<li>Monday<input type="text" name="monday" value="Workout Selection Here"></li>
-<li>Tuesday<input type="text" name="tuesday" value="Workout Selection Here"></li>
-<li>Wednesday<input type="text" name="wednesday" value="Workout Selection Here"></li>
-<li>Thursday<input type="text" name="thursday" value="Workout Selection Here"></li>
-<li>Friday<input type="text" name="friday" value="Workout Selection Here"></li>
-<li>Saturday<input type="text" name="saturday" value="Workout Selection Here"></li>
-<li>Sunday<input type="text" name="sunday" value="Workout Selection Here"></li>
-</ul>
+  </div>
+</div> <!-- end carousel-->
 
+<h2> Type workout split of choice for each day of the week</h2>
+<div class="row">
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Monday</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>
+  </div>
+  </div>
+  </div> <!-- end monday card -->
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Tuesday</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>
+  </div>
+  </div>
+  </div> <!-- end tuesday card -->
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Wednesday</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>
+  </div>
+  </div>
+  </div> <!-- end wednesday card -->
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Thursday</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>  
+  </div>
+  </div>
+  </div> <!-- end thursday card -->
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Friday</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>
+  </div>
+  </div>
+  </div> <!-- end friday card -->
+  <div class="col-md-2">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Weekend</h5>
+    <input type="text" name="monday" value="Workout Selection Here">
+    <p class="card-text"><ul>
+    <li>Leg Day</li>
+    <li>Push Day</li>
+    <li>Pull Day</li>
+    <li>Cardio/Abs</li>
+    <li>Rest Day</li>
+    <li>Other Option</li>
+    </ul></p>
+  </div>
+  </div>
+  </div> <!-- end weekend card -->
+</div> <!-- end week cards section -->
 
-<h2>Select Exercises For Each Day</h2>
+<div class="row">
+<h3><button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Selection Instructions" data-bs-content="Select 4-5 exercises for each day you plan on exercising. Feel free to add different exercises for each day, or skip a muscle group if that is not in your fitness goals! The following lists are provided to simply guide you in your workout planner.">Exercise Selection</button></h3>
+</div> <!-- button not working -->
 
-<div id=exercises>
-<p> Select 4-5 exercises for each day you plan on exercising. Feel free to add different exercises for each day, or skip a muscle group if that is not in your fitness goals! The following lists are provided to simply guide you in your workout planner.</p>
+<h4> Leg Day </h4>
+<div class="row">
+  <div class="col-md-8">
+    <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Quads and Hamstrings</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Glutes</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">All Leg Day Options</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+      <ol>
+        <li><input type="checkbox" name="legday" value="legpress">Leg Press</li>
+       <li><input type="checkbox" name="legday" value="squats">Goblet Squats</li>
+      <li><input type="checkbox" name="legday" value="rdl">RDLs</li>
+      <li><input type="checkbox" name="legday" value="legextension">Leg Extension</li>
+      <li><input type="checkbox" name="legday" value="calf">Calf Raises</li>
+      <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+    </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+       <ol> 
+        <li><input type="checkbox" name="glutes" value="thrusts">Hip Thrusts</li>
+        <li><input type="checkbox" name="glutes" value="abductors">Hip Abductors</li>
+        <li><input type="checkbox" name="glutes" value="kickbacks">Cable Kickbacks</li>
+        <li><input type="checkbox" name="glutes" value="bulgarians">Bulgarian Split Squats</li>
+        <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+       </ol>
+      </div>
+    </div>
+  </div>
 </div>
+  </div> <!-- end of leg day-->
 
-	<h3>Leg Day</h3>
-	<p> The following exercises will target the following muscle groups: quads, hamstrings, calves, etc.</p>
-<ul>
-	<li><input type="checkbox" name="legday" value="legpress">Leg Press</li>
-	<li><input type="checkbox" name="legday" value="squats">Goblet Squats</li>
-	<li><input type="checkbox" name="legday" value="rdl">RDLs</li>
-	<li><input type="checkbox" name="legday" value="legextension">Leg Extension</li>
-	<li><input type="checkbox" name="legday" value="calf">Calf Raises</li>
-	<li>Add Options<input type="text" name="options" value="Add new exercise"></li>
-</ul>
+<h4> Pull Day </h4>
+<div class="row">
+<div class="col-md-8">
+  <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Back Exercises</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Bicep Exercises</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">All Pull Day options</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <ol>
+          <li><input type="checkbox" name="pull" value="pulldowns">Lat Pulldowns</li>
+          <li><input type="checkbox" name="pull" value="rows">Back Rows</li>
+          <li><input type="checkbox" name="pull" value="pullup">Pull-ups</li>
+          <li><input type="checkbox" name="pull" value="bicep">Cable Face Pulls</li>
+          <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <ol>
+          <li><input type="checkbox" name="pull" value="pulldowns">Bicep Curls</li>
+          <li><input type="checkbox" name="pull" value="rows">Hammer Curls</li>
+          <li><input type="checkbox" name="pull" value="pullup">Preacher Curls</li>
+          <li><input type="checkbox" name="pull" value="bicep">Push Ups</li>
+          <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+      </ol>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div> <!-- end pull day-->
+
+<h4> Push Day </h4>
+<div class="row">
+  <div class="col-md-8">
+    <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Chest Exercises</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Shoulder & Tricep Exercises</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">All Push Day Exercises</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+       <ol>
+        <li><input type="checkbox" name="push" value="chestpress">Chest Press Machine</li>
+        <li><input type="checkbox" name="push" value="chestflys">Chest Flys</li>
+        <li><input type="checkbox" name="push" value="shoulderpress">Bench Press</li>
+        <li><input type="checkbox" name="push" value="latraises">Incline Bench Press</li>
+        <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+      </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <ol>
+          <li><input type="checkbox" name="push" value="chestpress">Shoulder Press</li>
+          <li><input type="checkbox" name="push" value="chestflys">Lateral Raises</li>
+          <li><input type="checkbox" name="push" value="shoulderpress">Tricep Pulldowns</li>
+          <li><input type="checkbox" name="push" value="latraises">Tricep Dips</li>
+          <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div> <!-- end push day -->
+
+<h4> Cardio & Abs </h4>
+<div class="row">
+  <div class="col-md-8">
+    <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cardio Exercises</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Ab Exercises</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">All Cardio & Ab Exercises</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+      <ol>
+        <li><input type="checkbox" name="abs" value="situps">Treadmill</li>
+        <li><input type="checkbox" name="abs" value="plank">Stairmaster</li>
+        <li><input type="checkbox" name="abs" value="crunches">Elliptical Machine</li>
+        <li><input type="checkbox" name="abs" value="twists">Bike Machine</li>
+        <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+      </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <ol>
+          <li><input type="checkbox" name="abs" value="situps">Sit-ups</li>
+          <li><input type="checkbox" name="abs" value="plank">Plank</li>
+          <li><input type="checkbox" name="abs" value="crunches">Bicycle crunches</li>
+          <li><input type="checkbox" name="abs" value="twists">Russian Twists</li>
+          <li><input type="checkbox" name="abs" value="raises">Leg Raises</li>
+          <li>Add Options<input type="text" name="options" value="Add new exercise"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div> <!-- end cardio & abs -->
+</div> <!-- end exercise selection-->
 
 
-	<h3>Push Day</h3>
-	<p>The following exercises will target the following muscles groups: chest, shoulders, and triceps.</p>
-<ul>
-	<li><input type="checkbox" name="push" value="chestpress">Chest Press</li>
-	<li><input type="checkbox" name="push" value="chestflys">Chest Flys</li>
-	<li><input type="checkbox" name="push" value="shoulderpress">Shoulder Press</li>
-	<li><input type="checkbox" name="push" value="latraises">Lateral Raises</li>
-	<li><input type="checkbox" name="push" value="pulldown">Tricep Pulldowns</li>
-	<li><input type="checkbox" name="push" value="dips">Tricep Dips</li>
-	<li>Add Options<input type="text" name="options" value="Add new exercise"></li>
-</ul>
+<!-- LOAD BOOTSTRAP JAVASCRIPT - DO NOT DELETE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-
-<h3>Glute Day</h3>
-<ul>
-	<li><input type="checkbox" name="glutes" value="thrusts">Hip Thrusts</li>
-	<li><input type="checkbox" name="glutes" value="abductors">Hip Abductors</li>
-	<li><input type="checkbox" name="glutes" value="kickbacks">Cable Kickbacks</li>
-	<li><input type="checkbox" name="glutes" value="bulgarians">Bulgarian Split Squats</li>
-	<li>Add Options<input type="text" name="options" value="Add new exercise"></li>
-</ul>
-
-<h3>Pull Day</h3>
-<p> The following exercises will target the following muscle groups: back and biceps.</p>
-<ul>
-	<li><input type="checkbox" name="pull" value="pulldowns">Lat Pulldowns</li>
-	<li><input type="checkbox" name="pull" value="rows">Back Rows</li>
-	<li><input type="checkbox" name="pull" value="pullup">Pull-ups</li>
-	<li><input type="checkbox" name="pull" value="bicep">Bicep Curls</li>
-	<li><input type="checkbox" name="pull" value="hammer">Hammer Curls</li>
-	<li>Add Options<input type="text" name="options" value="Add new exercise"></li>
-</ul>
-
-	<h3>Abs</h3>
-<ul>
-	<li><input type="checkbox" name="abs" value="situps">Sit-ups</li>
-	<li><input type="checkbox" name="abs" value="plank">Plank</li>
-	<li><input type="checkbox" name="abs" value="crunches">Bicycle crunches</li>
-	<li><input type="checkbox" name="abs" value="twists">Russian Twists</li>
-	<li><input type="checkbox" name="abs" value="raises">Leg Raises</li>
-	<li>Add Options<input type="text" name="options" value="Add new exercise"></li>
-</ul>
-
-</body>
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+<!-- END LOADING BOOTSTRAP JAVASCRIPT -->
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
