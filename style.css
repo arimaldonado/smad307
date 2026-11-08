@@ -7,9 +7,9 @@ p, h3, ul {font-family:"Fira Sans", sans-serif;
 			font-style: normal;}
 
 
-h1, h2, h3 {text-align: center}
+h1, h2, h3, h4 {text-align: center}
 
-h1, h2, h3, h4 {color: darkcyan;}
+h1, h2, h3, h4, h5 {color: darkcyan;}
 
 #intro {text-align: center}
 
